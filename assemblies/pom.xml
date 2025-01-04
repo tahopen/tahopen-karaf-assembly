@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>pentaho</groupId>
+    <artifactId>pentaho-karaf</artifactId>
+    <version>10.1.0.0-SNAPSHOT</version>
+  </parent>
+
+  <groupId>org.hitachivantara.karaf.assemblies</groupId>
+  <artifactId>assembly-modules</artifactId>
+  <packaging>pom</packaging>
+
+  <modules>
+    <module>common-resources</module>
+    <module>prd</module>
+    <module>pme</module>
+    <module>client</module>
+    <module>server</module>
+    <module>pmr</module>
+  </modules>
+
+  <build>
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <groupId>org.hitachivantara.karaf.tooling</groupId>
+          <artifactId>karaf-maven-plugin</artifactId>
+
+          <extensions>true</extensions>
+
+          <executions>
+            <execution>
+              <id>default-assembly</id>
+              <configuration>
+                <featuresProcessing>target/classes/etc/org.apache.karaf.features.xml</featuresProcessing>
+              </configuration>
+            </execution>
+          </executions>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+  </build>
+
+</project>

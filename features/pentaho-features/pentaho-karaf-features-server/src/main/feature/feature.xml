@@ -1,0 +1,54 @@
+<!--
+ ~ This program is free software; you can redistribute it and/or modify it under the
+ ~ terms of the GNU Lesser General Public License, version 2.1 as published by the Free Software
+ ~ Foundation.
+ ~
+ ~ You should have received a copy of the GNU Lesser General Public License along with this
+ ~ program; if not, you can obtain a copy at http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html
+ ~ or from the Free Software Foundation, Inc.,
+ ~ 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+ ~
+ ~ This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY;
+ ~ without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+ ~ See the GNU Lesser General Public License for more details.
+ ~
+ ~ Copyright 2014 - 2021 Hitachi Vantara. All rights reserved.
+ -->
+
+<features name="pentaho-karaf-features-server" xmlns="http://karaf.apache.org/xmlns/features/v1.3.0">
+    <repository>mvn:org.hitachivantara.karaf.features/spring53/${spring53.feature.artifact.version}/xml/features</repository>
+    <repository>mvn:org.pentaho/pentaho-requirejs-osgi-manager/${pentaho-osgi-bundles.version}/xml/features</repository>
+
+    <!-- The Pentaho Server has its own web application container and as such we are not including pax-web.
+         However, when doing the karaf assembly some pax-web features need to be resolved even if they are not used.
+         Declaring them as emtpy features here. -->
+    <feature name="pax-http" description="Dummy feature for karaf assembly resolve purposes."/>
+    <feature name="pax-http-whiteboard" description="Dummy feature for karaf assembly resolve purposes."/>
+    <feature name="pax-war" description="Dummy feature for karaf assembly resolve purposes."/>
+    <!--  -->
+
+    <feature name="felix-bridge" description="Felix HTTP Bridge Service" version="${http-features-override.version}">
+        <bundle start-level="30">mvn:org.apache.felix/org.apache.felix.http.api/${felix.http.api.version}</bundle>
+        <bundle start-level="30">mvn:org.apache.felix/org.apache.felix.http.bridge/${felix.http.bridge.version}</bundle>
+
+        <capability>http-service;provider:=felix-bridge</capability>
+    </feature>
+
+    <feature name="pentaho-server" version="1.0">
+        <feature prerequisite="true">pentaho-base</feature>
+        <feature prerequisite="true">pentaho-client</feature>
+        <feature prerequisite="true">http-whiteboard</feature>
+        <feature version="[${spring53.bundle.version},5.4)">spring</feature>
+        <feature version="[${spring53.bundle.version},5.4)">spring-web</feature>
+
+        <bundle start-level="60">mvn:pentaho/pentaho-server-bundle/${pentaho-osgi-bundles.version}</bundle>
+
+        <bundle start-level="20">blueprint:mvn:pentaho/pentaho-blueprint-activators/${project.version}/xml/proxy-watcher</bundle>
+        <bundle start-level="50">mvn:pentaho/pentaho-proxy-spring4/${pentaho-osgi-bundles.version}</bundle>
+
+        <feature version="${project.version}">pentaho-requirejs-osgi-manager</feature>
+        <bundle>mvn:org.pentaho/spring-security-karaf-login-module/${project.version}</bundle>
+        <bundle dependency="true">mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
+    </feature>
+
+</features>
