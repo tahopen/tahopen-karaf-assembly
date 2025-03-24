@@ -4,15 +4,15 @@
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
-    <groupId>pentaho</groupId>
-    <artifactId>pentaho-karaf</artifactId>
-    <version>10.1.0.0-SNAPSHOT</version>
+    <groupId>org.tahopen</groupId>
+    <artifactId>tahopen-karaf</artifactId>
+    <version>0.1.0.0-SNAPSHOT</version>
   </parent>
 
-  <groupId>org.pentaho.karaf</groupId>
+  <groupId>org.tahopen.karaf</groupId>
   <!-- We need the artifactId to have the full name (including prefix pentaho-karaf-) because there is no way to override the
        generated feature's name which is equal to the artifactId using version 3.0.8 of the karaf-maven-plugin. -->
-  <artifactId>pentaho-karaf-overrides</artifactId>
+  <artifactId>tahopen-karaf-overrides</artifactId>
 
   <packaging>feature</packaging>
 

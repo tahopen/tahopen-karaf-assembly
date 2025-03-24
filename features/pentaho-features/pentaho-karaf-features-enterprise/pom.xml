@@ -3,12 +3,12 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <modelVersion>4.0.0</modelVersion>
   <parent>
-    <groupId>org.hitachivantara.karaf.features</groupId>
-    <artifactId>pentaho-features</artifactId>
-    <version>10.1.0.0-SNAPSHOT</version>
+    <groupId>org.tahopen.karaf.features</groupId>
+    <artifactId>tahopen-features</artifactId>
+    <version>0.1.0.0-SNAPSHOT</version>
   </parent>
 
-  <artifactId>pentaho-karaf-features-enterprise</artifactId>
+  <artifactId>tahopen-karaf-features-enterprise</artifactId>
   <packaging>feature</packaging>
 
   <properties>

@@ -4,9 +4,9 @@
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
-    <groupId>org.hitachivantara.karaf.assemblies</groupId>
+    <groupId>org.tahopen.karaf.assemblies</groupId>
     <artifactId>assembly-modules</artifactId>
-    <version>10.1.0.0-SNAPSHOT</version>
+    <version>0.1.0.0-SNAPSHOT</version>
   </parent>
 
   <artifactId>prd</artifactId>
@@ -38,14 +38,14 @@
       <type>xml</type>
     </dependency>
     <dependency>
-      <groupId>org.hitachivantara.karaf.features</groupId>
-      <artifactId>pentaho-karaf-features-standard</artifactId>
+      <groupId>org.tahopen.karaf.features</groupId>
+      <artifactId>tahopen-karaf-features-standard</artifactId>
       <classifier>features</classifier>
       <type>xml</type>
     </dependency>
     <dependency>
-      <groupId>pentaho-karaf-features</groupId>
-      <artifactId>pentaho-big-data-plugin-osgi</artifactId>
+      <groupId>tahopen-karaf-features</groupId>
+      <artifactId>tahopen-big-data-plugin-osgi</artifactId>
       <classifier>features</classifier>
       <type>xml</type>
     </dependency>
@@ -88,7 +88,7 @@
             <configuration>
               <artifactItems>
                 <artifactItem>
-                  <groupId>org.hitachivantara.karaf.assemblies</groupId>
+                  <groupId>org.tahopen.karaf.assemblies</groupId>
                   <artifactId>common-resources</artifactId>
                   <version>${project.version}</version>
                   <outputDirectory>target/classes</outputDirectory>

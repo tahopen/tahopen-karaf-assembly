@@ -5,8 +5,8 @@
 
   <parent>
     <artifactId>assembly-modules</artifactId>
-    <groupId>org.hitachivantara.karaf.assemblies</groupId>
-    <version>10.1.0.0-SNAPSHOT</version>
+    <groupId>org.tahopen.karaf.assemblies</groupId>
+    <version>0.1.0.0-SNAPSHOT</version>
   </parent>
 
   <artifactId>server</artifactId>
@@ -32,20 +32,20 @@
       <type>xml</type>
     </dependency>
     <dependency>
-      <groupId>org.hitachivantara.karaf.features</groupId>
-      <artifactId>pentaho-karaf-features-standard</artifactId>
+      <groupId>org.tahopen.karaf.features</groupId>
+      <artifactId>tahopen-karaf-features-standard</artifactId>
       <classifier>features</classifier>
       <type>xml</type>
     </dependency>
     <dependency>
-      <groupId>org.hitachivantara.karaf.features</groupId>
-      <artifactId>pentaho-karaf-features-server</artifactId>
+      <groupId>org.tahopen.karaf.features</groupId>
+      <artifactId>tahopen-karaf-features-server</artifactId>
       <classifier>features</classifier>
       <type>xml</type>
     </dependency>
     <dependency>
-      <groupId>pentaho-karaf-features</groupId>
-      <artifactId>pentaho-big-data-plugin-osgi</artifactId>
+      <groupId>tahopen-karaf-features</groupId>
+      <artifactId>tahopen-big-data-plugin-osgi</artifactId>
       <classifier>features</classifier>
       <type>xml</type>
     </dependency>
@@ -56,8 +56,8 @@
       <type>xml</type>
     </dependency>
     <dependency>
-      <groupId>org.pentaho</groupId>
-      <artifactId>pentaho-marketplace</artifactId>
+      <groupId>org.tahopen</groupId>
+      <artifactId>tahopen-marketplace</artifactId>
       <classifier>features</classifier>
       <type>xml</type>
     </dependency>
@@ -68,19 +68,19 @@
       <type>xml</type>
     </dependency>
     <dependency>
-      <groupId>org.pentaho</groupId>
-      <artifactId>pentaho-requirejs-osgi-manager</artifactId>
+      <groupId>org.tahopen</groupId>
+      <artifactId>tahopen-requirejs-osgi-manager</artifactId>
       <classifier>features</classifier>
       <type>xml</type>
     </dependency>
     <dependency>
-      <groupId>org.pentaho.webpackage</groupId>
-      <artifactId>pentaho-webpackage</artifactId>
+      <groupId>org.tahopen.webpackage</groupId>
+      <artifactId>tahopen-webpackage</artifactId>
       <classifier>features</classifier>
       <type>xml</type>
     </dependency>
     <dependency>
-      <groupId>org.pentaho</groupId>
+      <groupId>org.tahopen</groupId>
       <artifactId>common-ui-impl-client-config</artifactId>
       <classifier>configuration-bundle</classifier>
     </dependency>

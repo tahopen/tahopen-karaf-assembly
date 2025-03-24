@@ -3,13 +3,13 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <modelVersion>4.0.0</modelVersion>
   <parent>
-    <groupId>pentaho</groupId>
-    <artifactId>pentaho-karaf</artifactId>
-    <version>10.1.0.0-SNAPSHOT</version>
+    <groupId>org.tahopen</groupId>
+    <artifactId>tahopen-karaf</artifactId>
+    <version>0.1.0.0-SNAPSHOT</version>
   </parent>
-  <groupId>pentaho</groupId>
-  <artifactId>pentaho-blueprint-activators</artifactId>
-  <version>10.1.0.0-SNAPSHOT</version>
+  <groupId>org.tahopen</groupId>
+  <artifactId>tahopen-blueprint-activators</artifactId>
+  <version>0.1.0.0-SNAPSHOT</version>
   <packaging>pom</packaging>
   <build>
     <plugins>

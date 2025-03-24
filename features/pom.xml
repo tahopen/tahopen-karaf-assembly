@@ -4,12 +4,12 @@
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
-    <groupId>pentaho</groupId>
-    <artifactId>pentaho-karaf</artifactId>
-    <version>10.1.0.0-SNAPSHOT</version>
+    <groupId>org.tahopen</groupId>
+    <artifactId>tahopen-karaf</artifactId>
+    <version>0.1.0.0-SNAPSHOT</version>
   </parent>
 
-  <groupId>org.hitachivantara.karaf.features</groupId>
+  <groupId>org.tahopen.karaf.features</groupId>
   <artifactId>features-modules</artifactId>
   <packaging>pom</packaging>
 
