@@ -6,7 +6,7 @@
   <parent>
     <groupId>org.tahopen.karaf.assemblies</groupId>
     <artifactId>assembly-modules</artifactId>
-    <version>0.1.0.0-SNAPSHOT</version>
+    <version>0.1.0.0</version>
   </parent>
 
   <artifactId>pmr</artifactId>

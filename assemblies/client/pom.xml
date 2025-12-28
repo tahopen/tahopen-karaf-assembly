@@ -6,7 +6,7 @@
   <parent>
     <groupId>org.tahopen.karaf.assemblies</groupId>
     <artifactId>assembly-modules</artifactId>
-    <version>0.1.0.0-SNAPSHOT</version>
+    <version>0.1.0.0</version>
   </parent>
 
   <artifactId>client</artifactId>
@@ -40,7 +40,7 @@
     <dependency>
       <groupId>org.tahopen.karaf</groupId>
       <artifactId>tahopen-karaf-overrides</artifactId>
-      <version>0.1.0.0-SNAPSHOT</version>      
+      <version>0.1.0.0</version>      
       <classifier>features</classifier>
       <type>xml</type>
     </dependency>
