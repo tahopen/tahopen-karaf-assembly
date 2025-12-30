@@ -8,7 +8,7 @@
     <version>0.1.0.0</version>
   </parent>
 
-  <artifactId>tahopen-karaf-features-server</artifactId>
+  <artifactId>pentaho-karaf-features-server</artifactId>
   <packaging>feature</packaging>
 
   <properties>
