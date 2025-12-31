@@ -133,8 +133,8 @@
         <scope>runtime</scope>
       </dependency>
       <dependency>
-        <groupId>org.pentaho.karaf</groupId>
-        <artifactId>pentaho-karaf-overrides</artifactId>
+        <groupId>org.tahopen.karaf</groupId>
+        <artifactId>tahopen-karaf-overrides</artifactId>
         <classifier>features</classifier>
         <version>${project.version}</version>
         <type>xml</type>
@@ -197,16 +197,16 @@
         <scope>runtime</scope>
       </dependency>
       <dependency>
-        <groupId>pentaho</groupId>
-        <artifactId>pentaho-dataservice</artifactId>
+        <groupId>org.tahopen</groupId>
+        <artifactId>tahopen-dataservice</artifactId>
         <classifier>features</classifier>
         <version>${pdi-dataservice-plugin.version}</version>
         <type>xml</type>
         <scope>runtime</scope>
       </dependency>
       <dependency>
-        <groupId>pentaho</groupId>
-        <artifactId>pentaho-dataservice-legacy</artifactId>
+        <groupId>org.tahopen</groupId>
+        <artifactId>tahopen-dataservice-legacy</artifactId>
         <classifier>features</classifier>
         <version>${pdi-dataservice-plugin.version}</version>
         <type>xml</type>
@@ -239,3 +239,4 @@
   </dependencyManagement>
 
 </project>
+
