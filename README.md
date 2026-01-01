@@ -1,5 +1,5 @@
-# Hitachi Vantara Karaf Assembly
-This project builds and assembles the customized Pentaho Karaf Assembly.
+# Tahopen Karaf Assembly
+This project builds and assembles the customized Tahopen Karaf Assembly.
 
 ### Development
 Active development is taking place on the "future-develop" branch. This branch will contain the latest released code once available.
@@ -8,13 +8,13 @@ Active development is taking place on the "future-develop" branch. This branch w
 How to build
 --------------
 
-Pentaho Karaf Assembly uses the maven framework. 
+Tahopen Karaf Assembly uses the maven framework. 
 
 
 #### Pre-requisites for building the project:
 * Maven, version 3+
 * Java JDK 11
-* This [settings.xml](https://raw.githubusercontent.com/pentaho/maven-parent-poms/master/maven-support-files/settings.xml) in your <user-home>/.m2 directory
+* This [settings.xml](https://raw.githubusercontent.com/tahopen/maven-parent-poms/master/maven-support-files/settings.xml) in your <user-home>/.m2 directory
 
 #### Building it
 
