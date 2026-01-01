@@ -12,6 +12,7 @@
   <packaging>pom</packaging>
 
   <properties>
+    <pentaho-karaf-features-server-packaging>feature</pentaho-karaf-features-server-packaging>
     <!-- spring features were moved to the pentaho-osgi-bundles repository -->
     <spring53.feature.artifact.version>${pentaho-osgi-bundles.version}</spring53.feature.artifact.version>
     <spring43.feature.artifact.version>${pentaho-osgi-bundles.version}</spring43.feature.artifact.version>
