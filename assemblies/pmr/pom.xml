@@ -52,7 +52,7 @@
     <dependency>
       <groupId>org.tahopen.karaf</groupId>
       <artifactId>tahopen-karaf-overrides</artifactId>
-      <version>0.1.0.0-SNAPSHOT</version>      
+      <version>0.1.0.0</version>      
       <classifier>features</classifier>
       <type>xml</type>
     </dependency>
@@ -77,8 +77,8 @@
     </dependency>
     <!-- Shim/drivers dependencies -->
     <dependency>
-      <groupId>org.pentaho.hadoop.shims</groupId>
-      <artifactId>pentaho-hadoop-shims-apache-kar</artifactId>
+      <groupId>org.tahopen.hadoop.shims</groupId>
+      <artifactId>tahopen-hadoop-shims-apache-kar</artifactId>
       <classifier>features</classifier>
       <type>xml</type>
     </dependency>
@@ -117,6 +117,7 @@
       <plugin>
         <groupId>org.tahopen.karaf.tooling</groupId>
         <artifactId>karaf-maven-plugin</artifactId>
+        <version>0.1.0.0</version>
         <executions>
           <execution>
             <id>default-assembly</id>

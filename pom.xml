@@ -6,7 +6,7 @@
   <parent>
     <groupId>org.tahopen</groupId>
     <artifactId>tahopen-ce-parent-pom</artifactId>
-    <version>0.1.0.0</version>
+    <version>0.2.0.0</version>
   </parent>
 
   <groupId>org.tahopen</groupId>
@@ -229,8 +229,8 @@
 
       <!-- Shim/drivers dependencies -->
       <dependency>
-        <groupId>org.pentaho.hadoop.shims</groupId>
-        <artifactId>pentaho-hadoop-shims-apache-kar</artifactId>
+        <groupId>org.tahopen.hadoop.shims</groupId>
+        <artifactId>tahopen-hadoop-shims-apache-kar</artifactId>
         <version>${pentaho-hadoop-shims.version}</version>
         <classifier>features</classifier>
         <type>xml</type>
