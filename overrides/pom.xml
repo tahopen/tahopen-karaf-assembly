@@ -13,9 +13,7 @@
   <!-- We need the artifactId to have the full name (including prefix pentaho-karaf-) because there is no way to override the
        generated feature's name which is equal to the artifactId using version 3.0.8 of the karaf-maven-plugin. -->
   <artifactId>tahopen-karaf-overrides</artifactId>
-
   <packaging>feature</packaging>
-
   <description>This is a feature that defines overriding bundles in the karaf assembly.</description>
 
   <dependencies>

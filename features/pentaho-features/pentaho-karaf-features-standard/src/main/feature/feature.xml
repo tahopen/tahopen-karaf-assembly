@@ -16,12 +16,12 @@
  -->
 
 <features name="pentaho-karaf-features-standard" xmlns="http://karaf.apache.org/xmlns/features/v1.3.0">
-  <repository>mvn:org.pentaho/pentaho-osgi-utils/${pentaho-osgi-bundles.version}/xml/features</repository>
+  <repository>mvn:org.tahopen/tahopen-osgi-utils/${pentaho-osgi-bundles.version}/xml/features</repository>
 
-  <repository>mvn:org.pentaho/pentaho-requirejs-osgi-manager/${pentaho-osgi-bundles.version}/xml/features</repository>
-  <repository>mvn:org.pentaho.webpackage/pentaho-webpackage/${pentaho-osgi-bundles.version}/xml/features</repository>
+  <repository>mvn:org.tahopen/tahopen-requirejs-osgi-manager/${pentaho-osgi-bundles.version}/xml/features</repository>
+  <repository>mvn:org.tahopen.webpackage/tahopen-webpackage/${pentaho-osgi-bundles.version}/xml/features</repository>
 
-  <repository>mvn:pentaho/pentaho-dataservice/${pdi-dataservice-plugin.version}/xml/features</repository>
+  <repository>mvn:org.tahopen/tahopen-dataservice/${pdi-dataservice-plugin.version}/xml/features</repository>
 
   <!-- pdi-platform feature is using spring feature -->
   <repository>mvn:org.hitachivantara.karaf.features/spring32/${spring32.feature.artifact.version}/xml/features</repository>

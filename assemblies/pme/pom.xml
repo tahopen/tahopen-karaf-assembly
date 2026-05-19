@@ -71,6 +71,7 @@
     <dependency>
       <groupId>org.tahopen</groupId>
       <artifactId>tahopen-dataservice</artifactId>
+      <version>0.1.0.0</version>
       <classifier>features</classifier>
       <type>xml</type>
     </dependency>

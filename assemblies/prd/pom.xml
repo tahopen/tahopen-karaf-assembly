@@ -11,6 +11,8 @@
 
   <artifactId>prd</artifactId>
   <packaging>karaf-assembly</packaging>
+  <version>0.1.0.0</version>
+
   <name>Assemblies :: PRD</name>
 
   <dependencies>
@@ -52,6 +54,7 @@
     <dependency>
       <groupId>org.tahopen</groupId>
       <artifactId>tahopen-dataservice</artifactId>
+      <version>0.1.0.0</version>
       <classifier>features</classifier>
       <type>xml</type>
     </dependency>
@@ -124,9 +127,9 @@
                 <feature>kar</feature>
                 <feature>config</feature>
                 <feature>community-edition</feature>
-                <feature>pentaho-client-minimal</feature>
-                <feature>pentaho-dataservice-client</feature>
-                <feature>pentaho-big-data-plugin-testless-osgi</feature>
+                <feature>tahopen-client-minimal</feature>
+                <feature>tahopen-dataservice-client</feature>
+                <feature>tahopen-big-data-plugin-testless-osgi</feature>
 
                 <!-- Shim/drivers features -->
                 <feature>pentaho-hadoop-shims-apache-kar</feature>
@@ -135,16 +138,16 @@
                 <!-- list of features to be installed into system repository and not mentioned elsewhere. -->
                 <!-- until we enable the automatic generation of the `etc/org.apache.karaf.features.cfg` file,
                 its repositories must be added to the `featuresRepositories` property of that file. -->
-                <feature>pentaho-karaf-overrides</feature>
+                <feature>tahopen-karaf-overrides</feature>
                 <feature>config</feature>
                 <feature>ssh</feature>
                 <feature>http</feature>
                 <feature>cxf-jaxrs</feature>
                 <feature>war</feature>
                 <feature>build-helper</feature>
-                <feature>pdi-data-refinery</feature>
-                <feature>pentaho-requirejs-osgi-manager</feature>
-                <feature>pentaho-webpackage</feature>
+                <feature>tdi-data-refinery</feature>
+                <feature>tahopen-requirejs-osgi-manager</feature>
+                <feature>tahopen-webpackage</feature>
               </installedFeatures>
             </configuration>
           </execution>
