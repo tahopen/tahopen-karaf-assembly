@@ -58,7 +58,7 @@
     </dependency>
     <dependency>
       <groupId>org.tahopen</groupId>
-      <artifactId>pdi-marketplace</artifactId>
+      <artifactId>tdi-marketplace</artifactId>
       <classifier>features</classifier>
       <type>xml</type>
     </dependency>
