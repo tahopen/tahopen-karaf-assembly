@@ -11,6 +11,7 @@
 
   <artifactId>client</artifactId>
   <packaging>karaf-assembly</packaging>
+  <version>0.1.0.0</version>  
   <name>Assemblies :: Client</name>
 
   <dependencies>
@@ -59,12 +60,14 @@
     <dependency>
       <groupId>org.tahopen</groupId>
       <artifactId>tdi-marketplace</artifactId>
+      <version>0.1.0.0</version>
       <classifier>features</classifier>
       <type>xml</type>
     </dependency>
     <dependency>
       <groupId>org.tahopen</groupId>
       <artifactId>tahopen-requirejs-osgi-manager</artifactId>
+      <version>0.1.0.0</version>
       <classifier>features</classifier>
       <type>xml</type>
     </dependency>
@@ -132,9 +135,9 @@
 
       <!-- karaf-maven-plugin will call both assembly and archive goals -->
       <plugin>
-        <groupId>org.tahopen.karaf.tooling</groupId>
+        <groupId>org.hitachivantara.karaf.tooling</groupId>
         <artifactId>karaf-maven-plugin</artifactId>
-        <version>0.1.0.0</version>
+        <version>4.2.15</version>
         <executions>
           <execution>
             <id>default-assembly</id>
@@ -172,20 +175,20 @@
                 <feature>package</feature>
                 <feature>management</feature>
                 <feature>diagnostic</feature>
-                <feature>pentaho-base</feature>
-                <feature>pentaho-client</feature>
-                <feature>pentaho-dataservice</feature>
-                <feature>pentaho-metaverse</feature>
-                <feature>pdi-marketplace</feature>
-                <feature>pdi-data-refinery</feature>
-                <feature>pentaho-spoon</feature>
-                <feature>pentaho-requirejs-osgi-manager</feature>
-                <feature>pentaho-webpackage</feature>
-                <feature>pentaho-big-data-impl-connections</feature>
-                <feature>pentaho-hadoop-cluster-ui</feature>
+                <feature>tahopen-base</feature>
+                <feature>tahopen-client</feature>
+                <feature>tahopen-dataservice</feature>
+                <feature>tahopen-metaverse</feature>
+                <feature>tdi-marketplace</feature>
+                <feature>tdi-data-refinery</feature>
+                <feature>tahopen-spoon</feature>
+                <feature>tahopen-requirejs-osgi-manager</feature>
+                <feature>tahopen-webpackage</feature>
+                <feature>tahopen-big-data-impl-connections</feature>
+                <feature>tahopen-hadoop-cluster-ui</feature>
 
                 <!-- Shim/drivers features -->
-                <feature>pentaho-hadoop-shims-apache-kar</feature>
+                <feature>tahopen-hadoop-shims-apache-kar</feature>
               </installedFeatures>
             </configuration>
           </execution>

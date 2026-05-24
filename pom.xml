@@ -44,7 +44,7 @@
     <pdi-monitoring-plugin.version>0.1.0.0</pdi-monitoring-plugin.version>
     <pentaho-metaverse.version>0.1.0.0</pentaho-metaverse.version>
     <commons.lang.version>2.6</commons.lang.version>
-    <pentaho-osgi-bundles.version>0.1.0.0</pentaho-osgi-bundles.version>
+    <pentaho-osgi-bundles.version>0.1.0.0-SNAPSHOT</pentaho-osgi-bundles.version>
     <pdi.version>0.1.0.0</pdi.version>
     <pdi-dataservice-plugin.version>0.1.0.0</pdi-dataservice-plugin.version>
     <pdi-dataservice-client-plugin.version>0.1.0.0</pdi-dataservice-client-plugin.version>
@@ -166,7 +166,7 @@
       </dependency>
       <dependency>
         <groupId>org.tahopen</groupId>
-        <artifactId>pdi-marketplace</artifactId>
+        <artifactId>tahopen-bi-platform-data-access</artifactId>
         <classifier>features</classifier>
         <version>${pentaho-marketplace-modules.version}</version>
         <type>xml</type>
@@ -237,6 +237,7 @@
       </dependency>
     </dependencies>
   </dependencyManagement>
+
 
 </project>
 

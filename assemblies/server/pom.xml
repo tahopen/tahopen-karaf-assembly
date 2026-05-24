@@ -131,9 +131,9 @@
 
       <!-- karaf-maven-plugin will call both assembly and archive goals -->
       <plugin>
-        <groupId>org.tahopen.karaf.tooling</groupId>
+        <groupId>org.hitachivantara.karaf.tooling</groupId>
         <artifactId>karaf-maven-plugin</artifactId>
-        <version>0.1.0.0</version>
+        <version>4.2.15</version>
         <executions>
           <execution>
             <id>default-assembly</id>
@@ -153,15 +153,15 @@
                 <feature>config</feature>
                 <feature>management</feature>
                 <feature>community-edition</feature>
-                <feature>pentaho-server</feature>
-                <feature>pentaho-metaverse</feature>
-                <feature>pentaho-dataservice-legacy</feature>
-                <feature>pdi-data-refinery</feature>
-                <feature>pentaho-marketplace</feature>
-                <feature>pentaho-hadoop-cluster-ui</feature>
+                <feature>tahopen-server</feature>
+                <feature>tahopen-metaverse</feature>
+                <feature>tahopen-dataservice-legacy</feature>
+                <feature>tdi-data-refinery</feature>
+                <feature>tahopen-marketplace</feature>
+                <feature>tahopen-hadoop-cluster-ui</feature>
 
                 <!-- Shim/drivers features -->
-                <feature>pentaho-hadoop-shims-apache-kar</feature>
+                <feature>tahopen-hadoop-shims-apache-kar</feature>
               </bootFeatures>
               <installedFeatures>
                 <!-- list of features to be installed into system repository and not mentioned elsewhere. -->
@@ -172,8 +172,8 @@
                 <feature>diagnostic</feature>
                 <feature>package</feature>
                 <feature>wrapper</feature>
-                <feature>pentaho-requirejs-osgi-manager</feature>
-                <feature>pentaho-webpackage</feature>
+                <feature>tahopen-requirejs-osgi-manager</feature>
+                <feature>tahopen-webpackage</feature>
               </installedFeatures>
             </configuration>
           </execution>

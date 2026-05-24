@@ -123,9 +123,9 @@
 
       <!-- karaf-maven-plugin will call both assembly and archive goals -->
       <plugin>
-        <groupId>org.tahopen.karaf.tooling</groupId>
+        <groupId>org.hitachivantara.karaf.tooling</groupId>
         <artifactId>karaf-maven-plugin</artifactId>
-        <version>0.1.0.0</version>
+        <version>4.2.15</version>
         <executions>
           <execution>
             <id>default-assembly</id>
@@ -148,7 +148,7 @@
                 <feature>pentaho-fasterxml</feature>
 
                 <!-- Shim/drivers features -->
-                <feature>pentaho-hadoop-shims-apache-kar</feature>
+                <feature>tahopen-hadoop-shims-apache-kar</feature>
               </bootFeatures>
               <installedFeatures>
                 <!-- list of features to be installed into system repository and not mentioned elsewhere. -->
@@ -159,14 +159,14 @@
                 <feature>http</feature>
                 <feature>cxf-jaxrs</feature>
                 <feature>war</feature>
-                <feature>pentaho-base</feature>
-                <feature>pentaho-karaf-overrides</feature>
-                <feature>pentaho-big-data-plugin-tests</feature>
-                <feature>pentaho-big-data-plugin-testless-osgi</feature>
+                <feature>tahopen-base</feature>
+                <feature>tahopen-karaf-overrides</feature>
+                <feature>tahopen-big-data-plugin-tests</feature>
+                <feature>tahopen-big-data-plugin-testless-osgi</feature>
                 <feature>build-helper</feature>
-                <feature>pdi-data-refinery</feature>
-                <feature>pentaho-requirejs-osgi-manager</feature>
-                <feature>pentaho-webpackage</feature>
+                <feature>tdi-data-refinery</feature>
+                <feature>tahopen-requirejs-osgi-manager</feature>
+                <feature>tahopen-webpackage</feature>
               </installedFeatures>
             </configuration>
           </execution>

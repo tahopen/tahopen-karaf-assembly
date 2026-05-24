@@ -31,7 +31,7 @@
             with multiple hosts. See https://jira.apache.org/jira/browse/KARAF-6501. -->
        <!-- <bundle
                 originalUri="mvn:org.apache.karaf.features/org.apache.karaf.features.extension/${karaf.version}"
-                replacement="mvn:org.hitachivantara.karaf.features/org.apache.karaf.features.extension/${hv-patched-karaf-features-extension.version}" mode="maven" />
+                replacement="mvn:org.tahopen.karaf.features/org.apache.karaf.features.extension/${hv-patched-karaf-features-extension.version}" mode="maven" />
 -->
         <!-- [BACKLOG-30800] Prevent cxf to wire to the wrong javax.ws.rs version -->
         <bundle

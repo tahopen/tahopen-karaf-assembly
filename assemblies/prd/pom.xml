@@ -106,9 +106,9 @@
 
       <!-- karaf-maven-plugin will call both assembly and archive goals -->
       <plugin>
-        <groupId>org.tahopen.karaf.tooling</groupId>
+        <groupId>org.hitachivantara.karaf.tooling</groupId>
         <artifactId>karaf-maven-plugin</artifactId>
-        <version>0.1.0.0</version>
+        <version>4.2.15</version>
         <executions>
           <execution>
             <id>default-assembly</id>

@@ -115,9 +115,9 @@
 
       <!-- karaf-maven-plugin will call both assembly and archive goals -->
       <plugin>
-        <groupId>org.tahopen.karaf.tooling</groupId>
+        <groupId>org.hitachivantara.karaf.tooling</groupId>
         <artifactId>karaf-maven-plugin</artifactId>
-        <version>0.1.0.0</version>
+        <version>4.2.15</version>
         <executions>
           <execution>
             <id>default-assembly</id>
@@ -138,16 +138,16 @@
                 <feature>kar</feature>
                 <feature>config</feature>
                 <feature>community-edition</feature>
-                <feature>pentaho-big-data-plugin-osgi</feature>
+                <feature>tahopen-big-data-plugin-osgi</feature>
 
                 <!-- Shim/drivers features -->
-                <feature>pentaho-hadoop-shims-apache-kar</feature>
+                <feature>tahopen-hadoop-shims-apache-kar</feature>
               </bootFeatures>
               <installedFeatures>
                 <!-- list of features to be installed into system repository and not mentioned elsewhere. -->
                 <!-- until we enable the automatic generation of the `etc/org.apache.karaf.features.cfg` file,
                 its repositories must be added to the `featuresRepositories` property of that file. -->
-                <feature>pentaho-karaf-overrides</feature>
+                <feature>tahopen-karaf-overrides</feature>
                 <feature>management</feature>
                 <feature>ssh</feature>
                 <feature>diagnostic</feature>
@@ -157,8 +157,8 @@
                 <feature>pentaho-base</feature>
                 <feature>pentaho-client</feature>
                 <feature>build-helper</feature>
-                <feature>pentaho-requirejs-osgi-manager</feature>
-                <feature>pentaho-webpackage</feature>
+                <feature>tahopen-requirejs-osgi-manager</feature>
+                <feature>tahopen-webpackage</feature>
               </installedFeatures>
             </configuration>
           </execution>

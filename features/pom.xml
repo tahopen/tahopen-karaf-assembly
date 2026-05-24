@@ -12,6 +12,7 @@
   <groupId>org.tahopen.karaf.features</groupId>
   <artifactId>features-modules</artifactId>
   <packaging>pom</packaging>
+  <version>0.1.0.0</version>
 
   <modules>
     <module>pentaho-features</module>

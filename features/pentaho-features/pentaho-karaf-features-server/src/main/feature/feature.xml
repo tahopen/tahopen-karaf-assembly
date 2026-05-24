@@ -17,7 +17,7 @@
 
 <features name="pentaho-karaf-features-server" xmlns="http://karaf.apache.org/xmlns/features/v1.3.0">
     <repository>mvn:org.hitachivantara.karaf.features/spring53/${spring53.feature.artifact.version}/xml/features</repository>
-    <repository>mvn:org.pentaho/pentaho-requirejs-osgi-manager/${pentaho-osgi-bundles.version}/xml/features</repository>
+    <repository>mvn:org.tahopen/tahopen-requirejs-osgi-manager/${pentaho-osgi-bundles.version}/xml/features</repository>
 
     <!-- The Pentaho Server has its own web application container and as such we are not including pax-web.
          However, when doing the karaf assembly some pax-web features need to be resolved even if they are not used.
@@ -41,13 +41,13 @@
         <feature version="[${spring53.bundle.version},5.4)">spring</feature>
         <feature version="[${spring53.bundle.version},5.4)">spring-web</feature>
 
-        <bundle start-level="60">mvn:pentaho/pentaho-server-bundle/${pentaho-osgi-bundles.version}</bundle>
+        <bundle start-level="60">mvn:org.tahopen/tahopen-server-bundle/${pentaho-osgi-bundles.version}</bundle>
 
-        <bundle start-level="20">blueprint:mvn:pentaho/pentaho-blueprint-activators/${project.version}/xml/proxy-watcher</bundle>
-        <bundle start-level="50">mvn:pentaho/pentaho-proxy-spring4/${pentaho-osgi-bundles.version}</bundle>
+        <bundle start-level="20">blueprint:mvn:org.tahopen/pentaho-blueprint-activators/${project.version}/xml/proxy-watcher</bundle>
+        <bundle start-level="50">mvn:org.tahopen/tahopen-proxy-spring4/${pentaho-osgi-bundles.version}</bundle>
 
-        <feature version="${project.version}">pentaho-requirejs-osgi-manager</feature>
-        <bundle>mvn:org.pentaho/spring-security-karaf-login-module/${project.version}</bundle>
+        <feature version="${project.version}">tahopen-requirejs-osgi-manager</feature>
+        <bundle>mvn:org.tahopen/spring-security-karaf-login-module/${project.version}</bundle>
         <bundle dependency="true">mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
     </feature>
 
