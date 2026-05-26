@@ -154,8 +154,8 @@
                 <feature>package</feature>
                 <feature>wrapper</feature>
                 <feature>cxf-jaxrs</feature>
-                <feature>pentaho-base</feature>
-                <feature>pentaho-client</feature>
+                <feature>tahopen-base</feature>
+                <feature>tahopen-client</feature>
                 <feature>build-helper</feature>
                 <feature>tahopen-requirejs-osgi-manager</feature>
                 <feature>tahopen-webpackage</feature>

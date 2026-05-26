@@ -46,7 +46,7 @@
   <dependencySets>
     <dependencySet>
       <includes>
-        <include>org.pentaho:common-ui-impl-client-config:jar</include>
+        <include>org.tahopen:common-ui-impl-client-config:jar</include>
       </includes>
       <unpack>true</unpack>
       <unpackOptions>
