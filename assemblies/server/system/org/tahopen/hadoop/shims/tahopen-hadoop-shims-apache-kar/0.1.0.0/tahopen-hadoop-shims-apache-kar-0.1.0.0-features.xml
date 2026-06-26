@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<features xmlns="http://karaf.apache.org/xmlns/features/v1.6.0" name="tahopen-hadoop-shims-apache-kar-repo">
+    <feature name="tahopen-hadoop-shims-apache-kar" description="tahopen-hadoop-shims-apache-kar" version="0.1.0.0">
+        <details>parent pom for Tahopen CE Java projects</details>
+        <bundle>mvn:org.tahopen.hadoop.shims/tahopen-hadoop-shims-common-dependencies-V1/0.1.0.0</bundle>
+        <bundle>mvn:org.tahopen.hadoop.shims/tahopen-hadoop-shims-common-fragment-V1/0.1.0.0</bundle>
+        <bundle>mvn:org.tahopen.hadoop.shims/tahopen-hadoop-shims-apache-driver/0.1.0.0</bundle>
+    </feature>
+</features>

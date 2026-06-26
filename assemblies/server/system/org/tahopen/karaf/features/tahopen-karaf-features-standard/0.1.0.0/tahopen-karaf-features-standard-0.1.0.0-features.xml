@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<features xmlns="http://karaf.apache.org/xmlns/features/v1.6.0" name="pentaho-karaf-features-standard">
+    <repository>mvn:org.tahopen/tahopen-osgi-utils/0.1.0.0/xml/features</repository>
+    <repository>mvn:org.tahopen/tahopen-requirejs-osgi-manager/0.1.0.0/xml/features</repository>
+    <repository>mvn:org.tahopen.webpackage/tahopen-webpackage/0.1.0.0/xml/features</repository>
+    <repository>mvn:org.tahopen/tahopen-dataservice/0.1.0.0/xml/features</repository>
+    <repository>mvn:org.hitachivantara.karaf.features/spring32/4.2.15/xml/features</repository>
+    <feature name="pentaho-deployers" version="1.0.0">
+        <feature prerequisite="true">aries-blueprint</feature>
+        <feature prerequisite="true">deployer</feature>
+        <feature prerequisite="true">wrap</feature>
+        <feature prerequisite="true">spring-dm</feature>
+        <feature version="0.1.0.0">pentaho-webjars-deployer</feature>
+        <bundle dependency="true">mvn:com.googlecode.json-simple/json-simple/1.1.1</bundle>
+        <bundle dependency="true">mvn:com.google.guava/guava/32.1.2-jre</bundle>
+        <bundle dependency="true">mvn:com.google.guava/failureaccess/1.0.1</bundle>
+        <bundle dependency="true">mvn:com.google.code.findbugs/jsr305/3.0.2</bundle>
+        <bundle dependency="true">mvn:commons-io/commons-io/${commons.io.version}</bundle>
+        <bundle dependency="true">mvn:commons-lang/commons-lang/2.6</bundle>
+        <bundle dependency="true">mvn:commons-collections/commons-collections/3.2.2</bundle>
+        <bundle>mvn:org.tahopen/tahopen-platform-plugin-deployer/0.1.0.0</bundle>
+        <bundle>mvn:org.tahopen/tahopen-bundle-resource-manager/0.1.0.0</bundle>
+        <bundle>mvn:org.tahopen/tahopen-spring-dm-extender/0.1.0.0</bundle>
+    </feature>
+    <feature name="karaf-base" description="Base features of a karaf distribution" version="0.0.0">
+        <feature>wrap</feature>
+        <feature>aries-blueprint</feature>
+        <feature>shell</feature>
+        <feature>shell-compat</feature>
+        <feature>feature</feature>
+        <feature>jaas</feature>
+        <feature>bundle</feature>
+        <feature>config</feature>
+        <feature>deployer</feature>
+        <feature>diagnostic</feature>
+        <feature>feature</feature>
+        <feature>instance</feature>
+        <feature>kar</feature>
+        <feature>log</feature>
+        <feature>package</feature>
+        <feature>service</feature>
+        <feature>system</feature>
+    </feature>
+    <feature name="pentaho-base" version="1.0.0">
+        <feature prerequisite="true">karaf-base</feature>
+        <feature prerequisite="true">pentaho-osgi-utils</feature>
+        <feature prerequisite="true">pentaho-deployers</feature>
+        <feature prerequisite="true">pentaho-cache-system</feature>
+        <feature>pentaho-i18n</feature>
+        <bundle dependency="true">mvn:org.hitachivantara/pax-logging-api-wrap/1.11.13</bundle>
+        <bundle>wrap:mvn:org.tahopen/json/0.1.0.0</bundle>
+        <bundle>blueprint:mvn:org.tahopen/tahopen-blueprint-activators/0.1.0.0/xml/standard</bundle>
+        <bundle>mvn:org.tahopen/tdi-osgi-bridge-activator/0.1.0.0</bundle>
+        <bundle dependency="true">mvn:org.slf4j/osgi-over-slf4j/1.7.12</bundle>
+        <bundle dependency="true">mvn:commons-collections/commons-collections/3.2.2</bundle>
+        <bundle dependency="true">mvn:net.java.dev.jna/jna/5.12.0</bundle>
+        <bundle dependency="true">mvn:net.java.dev.jna/jna-platform/5.12.0</bundle>
+    </feature>
+    <feature name="pentaho-webjars-deployer" version="0.1.0.0">
+        <bundle>mvn:org.tahopen/tahopen-webjars-deployer/0.1.0.0</bundle>
+    </feature>
+    <feature name="pentaho-client" version="1.0.0">
+        <feature prerequisite="true">pentaho-client-minimal</feature>
+        <feature>pentaho-webpackage</feature>
+        <feature>pentaho-big-data-plugin-osgi</feature>
+        <bundle dependency="true">mvn:commons-collections/commons-collections/3.2.2</bundle>
+    </feature>
+    <feature name="pentaho-kerberos-jaas" version="1.0.0">
+        <configfile finalname="/etc/pentaho.kerberos.cfg">mvn:org.tahopen/tahopen-osgi-config/0.1.0.0/cfg/pentaho-kerberos</configfile>
+        <bundle>blueprint:mvn:org.tahopen/tahopen-blueprint-activators/0.1.0.0/xml/krb5-jaas</bundle>
+    </feature>
+    <feature name="ael-security" version="1.0.0"/>
+    <feature name="pentaho-spoon" version="0.1.0.0">
+        <feature>pdi-platform</feature>
+    </feature>
+    <feature name="pentaho-client-minimal" version="1.0.0">
+        <feature prerequisite="true">pentaho-base</feature>
+        <bundle dependency="true">mvn:commons-collections/commons-collections/3.2.2</bundle>
+    </feature>
+    <feature name="pdi-platform" version="0.1.0.0">
+        <feature version="[3.2.18.RELEASE_1,3.3)">spring</feature>
+        <bundle>mvn:org.tahopen/tahopen-tdi-platform/0.1.0.0</bundle>
+    </feature>
+    <feature name="pentaho-cache-system" version="1.0.0">
+        <feature prerequisite="true">wrap</feature>
+        <feature>transaction</feature>
+        <bundle>mvn:org.tahopen/tahopen-cache-manager-api/0.1.0.0</bundle>
+        <bundle>mvn:org.tahopen/guava-cache-provider/0.1.0.0</bundle>
+        <bundle>mvn:org.tahopen/tahopen-ehcache-provider/0.1.0.0</bundle>
+        <bundle dependency="true">wrap:mvn:org.ehcache/jcache/1.0.0</bundle>
+        <bundle dependency="true">mvn:net.sf.ehcache/ehcache/2.8.3</bundle>
+        <bundle dependency="true">mvn:commons-collections/commons-collections/3.2.2</bundle>
+    </feature>
+    <feature name="pentaho-tinkerpop-gremlin" version="2.6.0">
+        <bundle>wrap:mvn:com.tinkerpop.gremlin/gremlin-java/2.6.0</bundle>
+        <bundle>wrap:mvn:com.tinkerpop/pipes/2.6.0</bundle>
+        <bundle dependency="true">mvn:commons-collections/commons-collections/3.2.2</bundle>
+    </feature>
+    <feature name="pentaho-metaverse" version="0.1.0.0">
+        <details>Provides data lineage capabilities</details>
+        <feature>pentaho-client</feature>
+        <feature>pentaho-tinkerpop-gremlin</feature>
+        <feature>pentaho-fasterxml</feature>
+        <conditional>
+            <condition>http</condition>
+            <feature>pentaho-metaverse-web</feature>
+        </conditional>
+    </feature>
+    <feature name="pentaho-fasterxml" version="1.0.0">
+        <bundle dependency="true">wrap:mvn:net.sf.flexjson/flexjson/2.1</bundle>
+        <bundle dependency="true">mvn:com.fasterxml.jackson.core/jackson-databind/2.14.2</bundle>
+        <bundle dependency="true">mvn:com.fasterxml.jackson.core/jackson-annotations/2.14.2</bundle>
+        <bundle dependency="true">mvn:com.fasterxml.jackson.core/jackson-core/2.14.2</bundle>
+        <bundle dependency="true">mvn:commons-collections/commons-collections/3.2.2</bundle>
+    </feature>
+    <feature name="pentaho-metaverse-web" version="0.1.0.0">
+        <feature>http</feature>
+        <feature>http-whiteboard</feature>
+        <feature>cxf-jaxrs</feature>
+        <feature>pentaho-jackson</feature>
+        <bundle>mvn:pentaho/pentaho-metaverse-web/0.1.0.0</bundle>
+    </feature>
+    <feature name="build-helper" description="This is never used in production, exists only to facilitate the build" version="0.0.0">
+        <bundle dependency="true">mvn:org.apache.felix/org.apache.felix.http.bridge/4.0.6</bundle>
+        <bundle dependency="true">mvn:org.apache.karaf.kar/org.apache.karaf.kar.core/4.2.15</bundle>
+        <bundle dependency="true">mvn:org.apache.aries.transaction/org.apache.aries.transaction.manager/1.1.1</bundle>
+        <bundle dependency="true">mvn:commons-collections/commons-collections/3.2.2</bundle>
+    </feature>
+    <feature name="pdi-data-refinery" description="pentaho data refinery" version="0.0.0">
+        <configfile finalname="/etc/pentaho.geo.roles.cfg">mvn:pentaho/pentaho-osgi-config/0.1.0.0/cfg/pentaho-geo-roles</configfile>
+        <feature>pentaho-dataservice</feature>
+        <bundle dependency="true">wrap:mvn:pentaho/pentaho-modeler/0.1.0.0</bundle>
+        <bundle dependency="true">wrap:mvn:jfree/jcommon/1.0.14</bundle>
+        <bundle dependency="true">mvn:com.fasterxml.jackson.module/jackson-module-jaxb-annotations/2.14.2</bundle>
+        <bundle dependency="true">mvn:com.hitachivantara.security.web/csrf-token-service-client-java-jax-rs-v1/0.7.0</bundle>
+        <bundle>mvn:pentaho/data-refinery-pdi-plugin/0.1.0.0</bundle>
+    </feature>
+    <feature name="community-edition" description="Marker feature for Community Edition Builds" version="1.0.0"/>
+    <feature name="pentaho-i18n" version="0.1.0.0">
+        <bundle>mvn:org.tahopen/tahopen-i18n-bundle/0.1.0.0</bundle>
+        <conditional>
+            <condition>cxf-jaxrs</condition>
+            <feature>http-whiteboard</feature>
+            <bundle>mvn:org.tahopen/tahopen-i18n-webservice-bundle/0.1.0.0</bundle>
+        </conditional>
+    </feature>
+    <feature name="cxf-http-provider" version="3.3.1"/>
+    <feature name="pentaho-jackson" description="Jackson 2.x support" version="1.0.0">
+        <bundle dependency="true">mvn:com.fasterxml.jackson.core/jackson-core/2.14.2</bundle>
+        <bundle dependency="true">mvn:com.fasterxml.jackson.core/jackson-annotations/2.14.2</bundle>
+        <bundle dependency="true">mvn:com.fasterxml.jackson.core/jackson-databind/2.14.2</bundle>
+        <bundle dependency="true">wrap:mvn:com.fasterxml.jackson.jaxrs/jackson-jaxrs-base/2.14.2$overwrite=merge&amp;Import-Package=javax.ws.rs*;version="[2.0,3)",com.fasterxml.jackson*;version="[2.8,3)"</bundle>
+        <bundle dependency="true">wrap:mvn:com.fasterxml.jackson.jaxrs/jackson-jaxrs-json-provider/2.14.2$overwrite=merge&amp;Import-Package=javax.ws.rs*;version="[2.0,3)",com.fasterxml.jackson.module.jaxb;resolution:=optional;version="[2.8,3)",com.fasterxml.jackson*;version="[2.8,3)"</bundle>
+        <bundle dependency="true">mvn:com.fasterxml.jackson.module/jackson-module-jaxb-annotations/2.14.2</bundle>
+        <bundle dependency="true">mvn:org.apache.servicemix.specs/org.apache.servicemix.specs.jaxrs-api-2.1/2.9.1</bundle>
+    </feature>
+</features>

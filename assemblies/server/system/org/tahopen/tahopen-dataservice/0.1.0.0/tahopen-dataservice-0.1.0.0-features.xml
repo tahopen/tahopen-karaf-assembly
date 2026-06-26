@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<features xmlns="http://karaf.apache.org/xmlns/features/v1.6.0" name="tahopen-dataservice-repo">
+    <repository>mvn:org.tahopen/tahopen-dataservice-client/0.1.0.0/xml/features</repository>
+    <feature name="tahopen-dataservice" description="Tahopen Community Edition Project: tahopen-dataservice" version="0.1.0.0">
+        <details>Tahopen Data Services Server and Client bundled</details>
+        <feature>pentaho-metaverse-core</feature>
+        <feature version="0.1.0.0" prerequisite="false" dependency="false">tahopen-dataservice-client</feature>
+        <feature prerequisite="true" dependency="false">wrap</feature>
+        <bundle>mvn:org.tahopen/tdi-dataservice-server-plugin/0.1.0.0</bundle>
+        <bundle dependency="true">mvn:commons-io/commons-io/2.11.0</bundle>
+        <bundle>mvn:org.tahopen/tahopen-blueprint-collection-utils/0.1.0.0</bundle>
+        <bundle>wrap:mvn:org.tahopen/tahopen-modeler/0.1.0.0</bundle>
+    </feature>
+    <feature name="pentaho-metaverse-core" version="0.1.0.0">
+        <feature>pentaho-fasterxml</feature>
+        <feature>pentaho-tinkerpop-gremlin</feature>
+    </feature>
+</features>
